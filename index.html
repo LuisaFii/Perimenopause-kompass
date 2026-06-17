@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Perimenopause-Kompass – Luisa Fischer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  --cream:      #faf7f2;
+  --sand:       #f2ebe0;
+  --sand-mid:   #e8dece;
+  --sand-deep:  #d9cdb8;
+  --olive:      #7a6e50;
+  --olive-dark: #4e4530;
+  --olive-deep: #35301f;
+  --sage:       #9eb39a;
+  --sage-light: #d6e2d2;
+  --warm-gray:  #9a9082;
+  --text:       #2e2a22;
+  --text-mid:   #5a5246;
+  --text-light: #7a7060;
+  --terracotta: #b87355;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+}
+
+.hero-left {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sand);
+  padding: 60px 40px;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  width: min(420px, 80%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 12px var(--sand-mid), 0 0 0 24px var(--sage-light), 0 32px 80px rgba(78,69,48,0.18);
+}
+
+.hero-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transform: scale(1.04);
+}
+
+.hero-right {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 64px;
+  position: relative;
+}
+
+/* curved left edge */
+.hero-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -48px; bottom: 0;
+  width: 100px;
+  background: var(--cream);
+  border-radius: 0 0 0 0;
+  clip-path: ellipse(100px 55% at 100% 50%);
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 36px;
+}
+
+.hero-tag::before {
+  content: '';
+  display: block;
+  width: 28px; height: 1px;
+  background: var(--olive);
+}
+
+.hero-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 5.5vw, 80px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.0;
+  color: var(--olive-dark);
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+.hero-symptoms {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+  border-top: 1px solid var(--sand-deep);
+}
+
+.hero-symptom {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--sand-deep);
+  font-size: 14.5px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.hero-symptom:hover { color: var(--text); }
+
+.hero-symptom::before {
+  content: '·';
+  color: var(--olive);
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.hero-bridge {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 400;
+  color: var(--olive-dark);
+  line-height: 1.5;
+  margin-bottom: 44px;
+  border-left: 2px solid var(--sage);
+  padding-left: 18px;
+}
+
+.hero-bridge em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--olive-dark);
+  color: var(--cream);
+  padding: 19px 44px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 4px 24px rgba(78,69,48,0.22);
+  width: fit-content;
+}
+
+.btn-main:hover {
+  background: var(--olive-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(78,69,48,0.3);
+}
+
+.btn-main .arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.btn-main:hover .arrow { transform: translateX(4px); }
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--olive-dark);
+}
+
+.hero-price-sub {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-dot {
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-dot::before {
+  content: '✓';
+  color: var(--sage);
+  font-size: 11px;
+}
+
+/* ══════════════════════════════════════
+   TRUST BAR
+══════════════════════════════════════ */
+.trust-bar {
+  background: var(--olive-dark);
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sand-deep);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trust-item::before {
+  content: '';
+  display: block;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--sage);
+}
+
+.trust-item:first-child::before { display: none; }
+
+/* ══════════════════════════════════════
+   SECTION SHARED
+══════════════════════════════════════ */
+.section {
+  padding: 110px 40px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 18px;
+}
+
+.label::before {
+  content: '';
+  display: block;
+  width: 20px; height: 1px;
+  background: var(--olive);
+}
+
+.heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--olive-dark);
+  margin-bottom: 24px;
+}
+
+.heading em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.body-text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-mid);
+}
+
+/* ══════════════════════════════════════
+   STATEMENT BAND
+══════════════════════════════════════ */
+.statement {
+  background: var(--sand);
+  padding: 80px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.statement::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 240px;
+  color: var(--sand-deep);
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.statement p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--olive-dark);
+  line-height: 1.55;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ══════════════════════════════════════
+   FÜR WEN
+══════════════════════════════════════ */
+.fuerwen { background: var(--cream); }
+
+.fuerwen-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.fuerwen-photo {
+  position: relative;
+  top: 0;
+}
+
+.fuerwen-photo img {
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+}
+
+.fuerwen-photo-caption {
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  background: var(--olive-dark);
+  color: var(--sand);
+  padding: 20px 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  border-radius: 0 0 3px 3px;
+}
+
+.moments-list {
+  list-style: none;
+  margin-top: 12px;
+}
+
+.moment {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--sand-mid);
+  cursor: default;
+  transition: padding-left 0.2s;
+}
+
+.moment:first-child { border-top: 1px solid var(--sand-mid); }
+
+.moment:hover { padding-left: 8px; }
+
+.moment-head {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--olive-dark);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.moment-head::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  flex-shrink: 0;
+}
+
+.moment-body {
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-mid);
+  padding-left: 16px;
+}
+
+/* ══════════════════════════════════════
+   IMAGE BREAK
+══════════════════════════════════════ */
+.img-break {
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.img-break-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(53,48,31,0.72) 0%, rgba(53,48,31,0.2) 55%, transparent 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.img-break-quote {
+  max-width: 520px;
+}
+
+.img-break-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.2vw, 46px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.img-break-quote span {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+/* ══════════════════════════════════════
+   WAS DU BEKOMMST
+══════════════════════════════════════ */
+.ergebnis { background: var(--sand); }
+
+.ergebnis-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 64px;
+}
+
+.ergebnis-intro .body-text { max-width: 480px; }
+
+.ergebnis-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.e-card {
+  background: var(--cream);
+  padding: 48px 36px 44px;
+  position: relative;
+  transition: background 0.3s;
+  overflow: hidden;
+}
+
+.e-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--sage);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+
+.e-card:hover { background: var(--sand-deep); }
+.e-card:hover::after { transform: scaleX(1); }
+
+.e-card-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--sand-deep);
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.e-card:hover .e-card-num { color: var(--sage); }
+
+.e-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--olive-dark);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.e-card-text {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/* ══════════════════════════════════════
+   BONUS
+══════════════════════════════════════ */
+.bonus { background: var(--sand); }
+
+.bonus .label { color: var(--olive); }
+.bonus .label::before { background: var(--olive); }
+.bonus .heading { color: var(--olive-dark); }
+
+.bonus-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 52px;
+}
+
+.bonus-visual {
+  border: 1px solid rgba(158,179,154,0.3);
+  border-radius: 6px;
+  padding: 52px 44px;
+  background: rgba(255,255,255,0.04);
+  text-align: center;
+}
+
+.bonus-visual-icon {
+  font-size: 52px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.bonus-visual-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sand);
+  margin-bottom: 8px;
+}
+
+.bonus-visual-tag {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 400;
+}
+
+.bonus-text p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+}
+
+.bonus-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bonus-points li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.bonus-points li::before {
+  content: '→';
+  color: var(--sage);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════
+   ABOUT
+══════════════════════════════════════ */
+.about { background: var(--cream); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 96px;
+  align-items: start;
+}
+
+.about-photo {
+  position: sticky;
+  top: 40px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+  filter: contrast(1.04);
+}
+
+.about-photo-name {
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-light);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.about-content .heading { margin-bottom: 8px; }
+
+.about-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--olive);
+  margin-bottom: 36px;
+  line-height: 1.4;
+}
+
+.about-content .body-text { margin-bottom: 20px; }
+
+.about-creds {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cred {
+  padding: 16px 20px;
+  background: var(--sand);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.5;
+  border-left: 2px solid var(--sage);
+}
+
+/* ══════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════ */
+.testimonials { background: var(--sand); }
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.testi {
+  background: var(--cream);
+  padding: 40px 32px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.testi-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  color: var(--sage-light);
+  line-height: 0.8;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.testi-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text);
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.testi-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testi-name {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.testi-detail {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.testi.placeholder { opacity: 0.38; }
+
+/* ══════════════════════════════════════
+   CTA SECTION
+══════════════════════════════════════ */
+.cta { background: var(--olive-deep); text-align: center; padding: 120px 40px; }
+
+.cta .label { color: var(--sage); justify-content: center; }
+.cta .label::before { background: var(--sage); }
+
+.cta .heading {
+  color: var(--sand);
+  max-width: 660px;
+  margin: 0 auto 20px;
+}
+
+.cta-sub {
+  font-size: 16px;
+  font-weight: 300;
+  color: #b0a690;
+  max-width: 520px;
+  margin: 0 auto 52px;
+  line-height: 1.85;
+}
+
+.cta-price-block {
+  margin-bottom: 36px;
+}
+
+.cta-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 68px;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.cta-price-label {
+  font-size: 13px;
+  font-weight: 300;
+  color: #b0a690;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+  display: block;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--cream);
+  color: var(--olive-deep);
+  padding: 22px 56px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 6px 40px rgba(0,0,0,0.35);
+  margin-bottom: 24px;
+}
+
+.btn-cta:hover {
+  background: var(--sand);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 50px rgba(0,0,0,0.45);
+}
+
+.cta-reassure {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: #7a7060;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: var(--olive-deep);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer p, footer a {
+  font-size: 12px;
+  font-weight: 300;
+  color: #6a6050;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+footer a:hover { color: var(--sand-deep); }
+
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-right > * {
+  animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) both;
+}
+.hero-right > *:nth-child(1) { animation-delay: 0.05s; }
+.hero-right > *:nth-child(2) { animation-delay: 0.15s; }
+.hero-right > *:nth-child(3) { animation-delay: 0.25s; }
+.hero-right > *:nth-child(4) { animation-delay: 0.35s; }
+.hero-right > *:nth-child(5) { animation-delay: 0.45s; }
+.hero-right > *:nth-child(6) { animation-delay: 0.55s; }
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { height: 70vw; max-height: 460px; }
+  .hero-right { padding: 48px 28px 56px; }
+  .hero-right::before { display: none; }
+  .fuerwen-grid, .ergebnis-intro, .bonus-inner, .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .ergebnis-cards, .testi-grid { grid-template-columns: 1fr; }
+  .about-creds { grid-template-columns: 1fr; }
+  .about-photo { position: static; }
+  .img-break { height: 320px; }
+  .img-break-overlay { padding: 0 36px; }
+  .trust-bar { gap: 24px; }
+  .section { padding: 80px 24px; }
+  .statement { padding: 60px 28px; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-photo-wrap">
+      <img src="image_1.jpg" alt="Luisa Fischer">
+    </div>
+  </div>
+  <div class="hero-right">
+    <span class="hero-tag">Der Perimenopause-Kompass</span>
+
+    <h1 class="hero-question">Kennst du<br>das?</h1>
+
+    <ul class="hero-symptoms">
+      <li class="hero-symptom">Du liegst nachts wach und findest nicht zurück in den Schlaf — die Gedanken kreisen.</li>
+      <li class="hero-symptom">Du reagierst gereizter als früher — und erkennst dich selbst kaum wieder.</li>
+      <li class="hero-symptom">Du fühlst dich in deinem eigenen Körper fremd.</li>
+      <li class="hero-symptom">Du bist erschöpft, obwohl du geschlafen hast.</li>
+      <li class="hero-symptom">Du fragst dich: Was passiert hier eigentlich mit mir?</li>
+    </ul>
+
+    <p class="hero-bridge">
+      Das hat einen Namen — <em>und eine Erklärung.</em><br>
+      Der Perimenopause-Kompass gibt dir Orientierung.
+    </p>
+
+    <div class="cta-group">
+      <div class="hero-meta">
+        <div>
+          <div class="hero-price">9,99 €</div>
+          <div class="hero-price-sub">einmalig · inkl. MwSt.</div>
+        </div>
+        <a href="#kaufen" class="btn-main">
+          Perimenopause Kompass sichern + Bonus <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="hero-dots">
+        <span class="hero-dot">Sofortiger Zugang</span>
+        <span class="hero-dot">Für immer verfügbar</span>
+        <span class="hero-dot">Inkl. Bonus-Checkliste</span>
+      </div>
+      <div style="margin-top:16px;display:inline-block;background:rgba(158,179,154,0.18);border:1px solid var(--sage);border-radius:4px;padding:8px 16px;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);">
+        ✓ &nbsp;Inklusive Hormonshift-Checkliste
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TRUST BAR ══════════ -->
+<div class="trust-bar">
+  <div class="trust-item">Zertifizierte Wechseljahresberaterin</div>
+  <div class="trust-item">Zyklusmentorin</div>
+  <div class="trust-item">13 Jahre Lehrerin mit Herzblut</div>
+</div>
+
+<!-- ══════════ STATEMENT ══════════ -->
+<div class="statement reveal">
+  <p>„Nicht dein Wille hat nachgelassen. Nicht deine Disziplin. Dein System arbeitet nur nicht mehr so konstant wie früher — und das hat einen Namen."</p>
+</div>
+
+<!-- ══════════ FÜR WEN ══════════ -->
+<section class="section fuerwen">
+  <div class="container">
+    <div class="fuerwen-grid">
+      <div class="fuerwen-photo reveal">
+        <img src="image_2.jpg" alt="Für wen ist dieser Kurs">
+        <div class="fuerwen-photo-caption">
+          „Wenn du weißt, was in deinem Körper passiert,<br>hört das Gefühl auf, dich zu verlieren."
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="label">Erkennst du dich wieder?</span>
+        <h2 class="heading">Du bist nicht<br><em>allein damit.</em></h2>
+        <ul class="moments-list">
+          <li class="moment">
+            <div class="moment-head">Nachts um 3</div>
+            <div class="moment-body">Du liegst wach im Dunkeln. Dein Kopf fängt an zu kreisen — ohne Anlass, ohne Auslöser. Und kein Zurück in den Schlaf, egal wie du dich drehst.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">Du erkennst dich nicht mehr</div>
+            <div class="moment-body">Du reagierst schärfer als früher. Du bist emotionaler, weniger belastbar — und weißt selbst nicht, warum. Es fühlt sich an, als wärst du nicht mehr ganz du.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">Erschöpfung, die bleibt</div>
+            <div class="moment-body">Du schläfst — und wachst trotzdem müde auf. Die Energie, die du früher hattest, will einfach nicht kommen.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">Dein Zyklus verändert sich</div>
+            <div class="moment-body">Früher, später, stärker, schwächer. Was früher wie ein Takt funktioniert hat, folgt plötzlich keinem Rhythmus mehr.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">Bin ich zu jung dafür?</div>
+            <div class="moment-body">Mit 37, 40, 43 rechnet man nicht damit. Aber die Perimenopause beginnt oft früher als erwartet — und niemand spricht darüber.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ IMAGE BREAK ══════════ -->
+<div class="img-break">
+  <img src="image_3.jpg" alt="">
+  <div class="img-break-overlay">
+    <div class="img-break-quote">
+      <p>„Dein Körper arbeitet nicht gegen dich. Er verändert seinen Rhythmus."</p>
+      <span>Luisa Fischer</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ WAS DU BEKOMMST ══════════ -->
+<section class="section ergebnis">
+  <div class="container">
+    <div class="ergebnis-intro reveal">
+      <div>
+        <span class="label">Was dieser Kurs dir gibt</span>
+        <h2 class="heading">Vom Fragezeichen<br><em>zur Orientierung.</em></h2>
+      </div>
+      <p class="body-text">Du musst nicht alles sofort verändern. Es reicht, wenn du anfängst zu verstehen, was in deinem Körper passiert — und warum. Dieses Wissen gibt dir etwas zurück, das du vielleicht gerade vermisst: das Gefühl, dir selbst nicht mehr fremd zu sein.</p>
+    </div>
+    <div class="ergebnis-cards reveal">
+      <div class="e-card">
+        <div class="e-card-num">01</div>
+        <div class="e-card-title">Verständnis statt Verwirrung</div>
+        <p class="e-card-text">Du verstehst, was diese Phase biologisch bedeutet und warum du dich so fühlst wie du dich fühlst. Nicht als Diagnose — als Einordnung, die entlastet.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-card-num">02</div>
+        <div class="e-card-title">Dich selbst wiederfinden</div>
+        <p class="e-card-text">Was sich verändert hat, hat nichts mit Versagen zu tun. Das Wissen darüber gibt dir Raum zurück — und den Blick auf dich selbst.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-card-num">03</div>
+        <div class="e-card-title">Ein Wegweiser für die nächsten Jahre</div>
+        <p class="e-card-text">Der Perimenopause-Kompass begleitet dich — nicht nur jetzt, sondern als Orientierung durch die gesamte Übergangsphase.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="image_4.jpg" alt="Luisa Fischer">
+        <p class="about-photo-name">Luisa Fischer</p>
+      </div>
+      <div class="reveal">
+        <span class="label">Über mich</span>
+        <h2 class="heading">Ich bin Luisa.</h2>
+        <p class="about-tagline">Mama, ehemalige Lehrerin, zertifizierte Wechseljahresberaterin — und jemand, der selbst den Weg kennt.</p>
+        <p class="body-text">Ich begleite Frauen in Phasen, in denen sich etwas verschiebt. Im Körper. Im Rhythmus. Und oft auch im Blick auf sich selbst.</p>
+        <p class="body-text">Ich glaube daran, dass Verstehen der erste Schritt zur Entlastung ist. Nicht weil es alles löst — sondern weil das Gefühl, sich selbst wieder einordnen zu können, etwas Grundlegendes verändert. Weil vieles leichter wird, wenn wir wissen, was da eigentlich passiert.</p>
+        <div class="about-creds">
+          <div class="cred">Zertifizierte Wechseljahresberaterin</div>
+          <div class="cred">Zyklusmentorin</div>
+          <div class="cred">13 Jahre Lehrerin mit Herzblut</div>
+          <div class="cred">Gründerin She's a Vibe · Der Hormonshift</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ BONUS ══════════ -->
+<section class="section bonus">
+  <div class="container">
+    <span class="label reveal">Dein Bonus. Direkt beim Kauf.</span>
+    <h2 class="heading reveal">Die Hormonshift-Checkliste —<br><em>gut vorbereitet ins Arztgespräch.</em></h2>
+    <div class="bonus-inner reveal">
+      <div class="bonus-visual" style="border:none;background:transparent;padding:0;position:relative;">
+        <img id="mockup-src" src="image_5.png" alt="Perimenopause Kompass Mockup" style="width:100%;display:block;border-radius:4px;">
+      </div>
+      <div class="bonus-text">
+        <p>Viele Frauen gehen mit einem diffusen Gefühl zum Arzt. Sie wissen, dass irgendetwas nicht stimmt — aber können es nicht in Worte fassen. Und verlassen die Praxis mit demselben Gefühl: nicht wirklich gehört.</p>
+        <p>Diese Checkliste ändert das.</p>
+        <p>Sie begleitet dich über mindestens acht Wochen dabei, deinen Körper gezielt zu beobachten — Zyklus, Schlaf, Stimmung, Energie, Stoffwechsel. Was verändert sich? Was fällt dir immer wieder auf? Nach und nach entsteht ein Bild, das du klar benennen kannst.</p>
+        <p>Mit dieser Vorbereitung gehst du nicht als Suchende in dein nächstes Arztgespräch — sondern als jemand, der seinen Körper kennt und weiß, welche Fragen er stellen will.</p>
+        <ul class="bonus-points">
+          <li>Beobachtungsfelder zu Zyklus, Schlaf, Nervensystem, Energie, Körper, Hormonen und Verdauung</li>
+          <li>Konkrete Formulierungen und Musterfragen für dein Gespräch</li>
+          <li>Eine klare Struktur über 8 Wochen — einfach ausdrucken und mitnehmen</li>
+        </ul>
+        <p style="margin-top:28px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);">Beim Kauf des Perimenopause Kompass automatisch dabei. Ohne Aufpreis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="section testimonials">
+  <div class="container">
+    <span class="label reveal">Was andere sagen</span>
+    <h2 class="heading reveal">Stimmen</h2>
+    <div class="testi-grid">
+      <div class="testi placeholder reveal">
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Endlich habe ich verstanden, was in meinem Körper passiert. Ich dachte, ich spinne — aber es hat alles einen Grund.</p>
+        <div class="testi-author">
+          <span class="testi-name">Sandra</span>
+          <span class="testi-detail">41 Jahre</span>
+        </div>
+      </div>
+      <div class="testi placeholder reveal">
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Ich war skeptisch, weil ich erst 38 bin. Aber genau das war mein Moment. Dieser Kurs hat mir so viel Erleichterung gebracht.</p>
+        <div class="testi-author">
+          <span class="testi-name">Mia</span>
+          <span class="testi-detail">38 Jahre</span>
+        </div>
+      </div>
+      <div class="testi placeholder reveal">
+        <span class="testi-mark">"</span>
+        <p class="testi-text">Luisa erklärt so, dass man sich nicht überfordert fühlt. Ruhig, klar, ohne Drama. Genau das habe ich gebraucht.</p>
+        <div class="testi-author">
+          <span class="testi-name">Kathrin</span>
+          <span class="testi-detail">45 Jahre</span>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:12px;font-weight:300;color:var(--text-light);text-align:center;font-style:italic;">* Platzhalter – deine echten Stimmen kommen hier rein</p>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="section cta" id="kaufen">
+  <div class="container">
+    <span class="label">Dein Einstieg</span>
+    <h2 class="heading">Du musst nicht warten,<br><em>bis es mehr wird.</em></h2>
+    <p class="cta-sub">Du kannst jetzt anfangen — zu verstehen, was mit dir passiert. Das ist kein Luxus. Das ist das, was du verdienst.</p>
+    <div class="cta-price-block">
+      <div class="cta-price">9,99 €</div>
+      <span class="cta-price-label">Einmalig · inkl. MwSt. · Sofortiger Zugang</span>
+    </div>
+    <a href="https://alfima.com/luisafischer/perimenopause-kompass" class="btn-cta">
+      Jetzt kaufen &amp; sofort starten →
+    </a>
+    <p class="cta-reassure">
+      Digitaler Kurs · Für immer verfügbar · Kein Abo<br>
+      Widerrufsrecht gemäß §312g BGB · Sichere Zahlung
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <p>© 2025 Luisa Fischer · She's a Vibe · Der Hormonshift</p>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="widerruf.html">Widerrufsbelehrung</a>
+  </div>
+</footer>
+
+<script>
+  // scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+
+
+</body>
+</html>

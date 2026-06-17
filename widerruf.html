@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Widerrufsbelehrung – Luisa Fischer · Der Hormonshift</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  --cream:      #faf7f2;
+  --sand:       #f2ebe0;
+  --sand-mid:   #e8dece;
+  --sand-deep:  #d9cdb8;
+  --olive:      #7a6e50;
+  --olive-dark: #4e4530;
+  --olive-deep: #35301f;
+  --warm-gray:  #9a9082;
+  --text:       #2e2a22;
+  --text-mid:   #5a5246;
+  --text-light: #7a7060;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  background: var(--cream);
+  border-bottom: 1px solid var(--sand-mid);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--olive-dark);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-back {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--olive); }
+
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: var(--olive-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.page-date {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--warm-gray);
+  letter-spacing: 0.06em;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+.section { margin-bottom: 40px; }
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--olive-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+.section p {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 0.75rem;
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+.section ul {
+  margin: 0.5rem 0 0.75rem 1.4rem;
+}
+
+.section li {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+
+.section strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.section a {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+.section a:hover {
+  color: var(--olive-dark);
+  text-decoration: underline;
+}
+
+.highlight-box {
+  background: var(--sand);
+  border-left: 3px solid var(--olive);
+  border-radius: 0 6px 6px 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.highlight-box p {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-box p:last-child { margin-bottom: 0; }
+
+.muster-box {
+  background: var(--sand);
+  border: 1px solid var(--sand-mid);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin: 24px 0;
+}
+
+.muster-box p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 0.6rem;
+}
+
+.muster-box p:last-child { margin-bottom: 0; }
+
+.muster-title {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--warm-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--sand-mid);
+  margin: 40px 0;
+}
+
+footer {
+  background: var(--olive-deep);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer p, footer a {
+  font-size: 12px;
+  font-weight: 300;
+  color: #6a6050;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+footer a:hover { color: var(--sand-deep); }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .nav { padding: 16px 20px; }
+  .page-wrap { padding: 48px 20px 72px; }
+  .page-title { font-size: 2rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .muster-box { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Der Hormonshift</a>
+  <a href="index.html" class="nav-back">← Zurück zur Kursseite</a>
+</nav>
+
+<main class="page-wrap">
+
+  <h1 class="page-title">Widerrufsbelehrung</h1>
+  <p class="page-date">Stand: 9. Juni 2026</p>
+
+  <!-- Widerrufsrecht -->
+  <div class="section">
+    <p class="section-label">Widerrufsrecht</p>
+    <p>Du hast das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
+    <p>Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses.</p>
+    <p>Um dein Widerrufsrecht auszuüben, musst du uns</p>
+    <div class="highlight-box">
+      <p>
+        <strong>Luisa Fischer</strong><br>
+        Gooseweide 12<br>
+        49393 Lohne<br>
+        E-Mail: <a href="mailto:Hallohormone@gmail.com">Hallohormone@gmail.com</a>
+      </p>
+    </div>
+    <p>mittels einer eindeutigen Erklärung (z.&nbsp;B. eine per Post versandte oder per E-Mail übermittelte Nachricht) über deinen Entschluss, diesen Vertrag zu widerrufen, informieren. Du kannst dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.</p>
+    <p>Zur Wahrung der Widerrufsfrist reicht es aus, dass du die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absendest.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Folgen des Widerrufs -->
+  <div class="section">
+    <p class="section-label">Folgen des Widerrufs</p>
+    <p>Wenn du diesen Vertrag widerrufst, haben wir dir alle Zahlungen, die wir von dir erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über deinen Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das du bei der ursprünglichen Transaktion eingesetzt hast, es sei denn, mit dir wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden dir wegen dieser Rückzahlung Entgelte berechnet.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Besonderer Hinweis: Digitale Inhalte -->
+  <div class="section">
+    <p class="section-label">Besonderer Hinweis bei digitalen Inhalten</p>
+    <p>Bei Verträgen über die Lieferung von digitalen Inhalten, die nicht auf einem körperlichen Datenträger geliefert werden, erlischt das Widerrufsrecht vorzeitig, wenn wir mit der Ausführung des Vertrags begonnen haben, nachdem du ausdrücklich zugestimmt hast, dass wir mit der Ausführung des Vertrags vor Ablauf der Widerrufsfrist beginnen, und du bestätigt hast, dass du zur Kenntnis genommen hast, dass du durch deine Zustimmung mit Beginn der Ausführung des Vertrags dein Widerrufsrecht verlierst.</p>
+    <p><strong>Das bedeutet konkret:</strong> Sobald du dem Sofortzugang zum Kurs zugestimmt hast und der Kurs freigeschalten wurde, erlischt dein Widerrufsrecht. Diese Zustimmung wird im Kaufprozess ausdrücklich eingeholt.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Muster-Widerrufsformular -->
+  <div class="section">
+    <p class="section-label">Muster-Widerrufsformular</p>
+    <p>Wenn du den Vertrag widerrufen möchtest, kannst du dieses Formular ausfüllen und an uns zurücksenden. Die Verwendung ist freiwillig.</p>
+
+    <div class="muster-box">
+      <p class="muster-title">Muster-Widerrufsformular</p>
+      <p>An:<br>
+      Luisa Fischer<br>
+      Gooseweide 12<br>
+      49393 Lohne<br>
+      E-Mail: <a href="mailto:Hallohormone@gmail.com">Hallohormone@gmail.com</a></p>
+
+      <p style="margin-top: 1rem;">Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*) / die Erbringung der folgenden Dienstleistung (*)</p>
+
+      <p>Bestellt am (*) / erhalten am (*): ___________________________</p>
+
+      <p>Name des/der Verbraucher(s): ___________________________</p>
+
+      <p>Anschrift des/der Verbraucher(s): ___________________________</p>
+
+      <p>Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier): ___________________________</p>
+
+      <p>Datum: ___________________________</p>
+
+      <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--warm-gray);">(*) Unzutreffendes streichen.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Luisa Fischer · She's a Vibe · Der Hormonshift</p>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="widerruf.html">Widerrufsbelehrung</a>
+  </div>
+</footer>
+
+</body>
+</html>

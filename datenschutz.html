@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – Luisa Fischer · Der Hormonshift</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  --cream:      #faf7f2;
+  --sand:       #f2ebe0;
+  --sand-mid:   #e8dece;
+  --sand-deep:  #d9cdb8;
+  --olive:      #7a6e50;
+  --olive-dark: #4e4530;
+  --olive-deep: #35301f;
+  --warm-gray:  #9a9082;
+  --text:       #2e2a22;
+  --text-mid:   #5a5246;
+  --text-light: #7a7060;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  background: var(--cream);
+  border-bottom: 1px solid var(--sand-mid);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--olive-dark);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.nav-back {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--olive); }
+
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: var(--olive-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.page-date {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--warm-gray);
+  letter-spacing: 0.06em;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+/* Table of contents */
+.toc {
+  background: var(--sand);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 48px;
+}
+
+.toc-title {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--warm-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.toc ol {
+  margin-left: 1.2rem;
+}
+
+.toc li {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 2;
+}
+
+.toc a {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  color: var(--olive-dark);
+  text-decoration: underline;
+}
+
+.section { margin-bottom: 40px; }
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--olive-dark);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+.section p {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 0.75rem;
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+.section ul, .section ol {
+  margin: 0.5rem 0 0.75rem 1.4rem;
+}
+
+.section li {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+
+.section strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.section a {
+  color: var(--olive);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.section a:hover {
+  color: var(--olive-dark);
+  text-decoration: underline;
+}
+
+.subsection-title {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--warm-gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 20px 0 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--sand-mid);
+  margin: 40px 0;
+}
+
+.meta-box {
+  background: var(--sand);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 12px 0;
+}
+
+.meta-box p {
+  font-size: 0.88rem !important;
+  color: var(--text-light) !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.credit {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--warm-gray);
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+footer {
+  background: var(--olive-deep);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+footer p, footer a {
+  font-size: 12px;
+  font-weight: 300;
+  color: #6a6050;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+footer a:hover { color: var(--sand-deep); }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .nav { padding: 16px 20px; }
+  .page-wrap { padding: 48px 20px 72px; }
+  .page-title { font-size: 2rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .toc { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">Der Hormonshift</a>
+  <a href="index.html" class="nav-back">← Zurück zur Kursseite</a>
+</nav>
+
+<main class="page-wrap">
+
+  <h1 class="page-title">Datenschutzerklärung</h1>
+  <p class="page-date">Stand: 9. Juni 2026</p>
+
+  <!-- Inhaltsübersicht -->
+  <div class="toc">
+    <p class="toc-title">Inhaltsübersicht</p>
+    <ol>
+      <li><a href="#praembel">Präambel</a></li>
+      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+      <li><a href="#rechtsgrundlagen">Maßgebliche Rechtsgrundlagen</a></li>
+      <li><a href="#sicherheit">Sicherheitsmaßnahmen</a></li>
+      <li><a href="#international">Internationale Datentransfers</a></li>
+      <li><a href="#loeschung">Allgemeine Informationen zur Datenspeicherung und Löschung</a></li>
+      <li><a href="#rechte">Rechte der betroffenen Personen</a></li>
+      <li><a href="#leistungen">Geschäftliche Leistungen</a></li>
+      <li><a href="#zahlung">Zahlungsverfahren</a></li>
+      <li><a href="#hosting">Bereitstellung des Onlineangebots und Webhosting</a></li>
+      <li><a href="#cookies">Einsatz von Cookies</a></li>
+      <li><a href="#newsletter">Newsletter und elektronische Benachrichtigungen</a></li>
+      <li><a href="#werbung">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</a></li>
+      <li><a href="#socialmedia">Präsenzen in sozialen Netzwerken (Social Media)</a></li>
+      <li><a href="#plugins">Plug-ins und eingebettete Funktionen sowie Inhalte</a></li>
+      <li><a href="#aenderung">Änderung und Aktualisierung</a></li>
+      <li><a href="#begriffe">Begriffsdefinitionen</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Präambel -->
+  <div class="section" id="praembel">
+    <p class="section-label">1. Präambel</p>
+    <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als „Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.&nbsp;B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als „Onlineangebot").</p>
+    <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 2. Verantwortlicher -->
+  <div class="section" id="verantwortlicher">
+    <p class="section-label">2. Verantwortlicher</p>
+    <p>
+      Luisa Fischer<br>
+      Gooseweide 12<br>
+      49393 Lohne<br><br>
+      E-Mail-Adresse: <a href="mailto:Hallohormone@gmail.com">Hallohormone@gmail.com</a><br>
+      Impressum: <a href="impressum.html">impressum.html</a>
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 3. Rechtsgrundlagen -->
+  <div class="section" id="rechtsgrundlagen">
+    <p class="section-label">3. Maßgebliche Rechtsgrundlagen</p>
+    <p><strong>Maßgebliche Rechtsgrundlagen nach der DSGVO:</strong> Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese in der Datenschutzerklärung mit.</p>
+    <ul>
+      <li><strong>Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO)</strong> – Die betroffene Person hat ihre Einwilligung in die Verarbeitung der sie betreffenden personenbezogenen Daten für einen spezifischen Zweck oder mehrere bestimmte Zwecke gegeben.</li>
+      <li><strong>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO)</strong> – Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen.</li>
+      <li><strong>Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DSGVO)</strong> – Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich, der der Verantwortliche unterliegt.</li>
+      <li><strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</strong> – Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten verlangen, nicht überwiegen.</li>
+    </ul>
+    <p><strong>Nationale Datenschutzregelungen in Deutschland:</strong> Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland. Hierzu gehört insbesondere das Bundesdatenschutzgesetz (BDSG). Das BDSG enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall einschließlich Profiling.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 4. Sicherheitsmaßnahmen -->
+  <div class="section" id="sicherheit">
+    <p class="section-label">4. Sicherheitsmaßnahmen</p>
+    <p>Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeiten und des Ausmaßes der Bedrohung der Rechte und Freiheiten natürlicher Personen geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.</p>
+    <p>Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen und elektronischen Zugangs zu den Daten als auch des sie betreffenden Zugriffs, der Eingabe, der Weitergabe, der Sicherung der Verfügbarkeit und ihrer Trennung.</p>
+    <p><strong>Sicherung von Online-Verbindungen durch TLS-/SSL-Verschlüsselungstechnologie (HTTPS):</strong> Um die Daten der Nutzer, die über unsere Online-Dienste übertragen werden, vor unerlaubten Zugriffen zu schützen, setzen wir auf die TLS-/SSL-Verschlüsselungstechnologie. Wenn eine Website durch ein SSL-/TLS-Zertifikat gesichert ist, wird dies durch die Anzeige von HTTPS in der URL signalisiert.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 5. Internationale Datentransfers -->
+  <div class="section" id="international">
+    <p class="section-label">5. Internationale Datentransfers</p>
+    <p><strong>Datenverarbeitung in Drittländern:</strong> Sofern wir Daten in ein Drittland (d.&nbsp;h. außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) übermitteln oder dies im Rahmen der Nutzung von Diensten Dritter geschieht, erfolgt dies stets im Einklang mit den gesetzlichen Vorgaben.</p>
+    <p>Für Datenübermittlungen in die USA stützen wir uns vorrangig auf das Data Privacy Framework (DPF), welches durch einen Angemessenheitsbeschluss der EU-Kommission vom 10.07.2023 als sicherer Rechtsrahmen anerkannt wurde. Zusätzlich haben wir mit den jeweiligen Anbietern Standardvertragsklauseln abgeschlossen, die den Vorgaben der EU-Kommission entsprechen.</p>
+    <p>Bei den einzelnen Diensteanbietern informieren wir Sie darüber, ob sie nach dem DPF zertifiziert sind und ob Standardvertragsklauseln vorliegen. Weitere Informationen zum DPF finden Sie unter: <a href="https://www.dataprivacyframework.gov/" target="_blank" rel="noopener">dataprivacyframework.gov</a>.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 6. Datenspeicherung und Löschung -->
+  <div class="section" id="loeschung">
+    <p class="section-label">6. Allgemeine Informationen zur Datenspeicherung und Löschung</p>
+    <p>Wir löschen personenbezogene Daten, die wir verarbeiten, gemäß den gesetzlichen Bestimmungen, sobald die zugrundeliegenden Einwilligungen widerrufen werden oder keine weiteren rechtlichen Grundlagen für die Verarbeitung bestehen. Dies betrifft Fälle, in denen der ursprüngliche Verarbeitungszweck entfällt oder die Daten nicht mehr benötigt werden.</p>
+    <p>Ausnahmen bestehen, wenn gesetzliche Pflichten oder besondere Interessen eine längere Aufbewahrung oder Archivierung der Daten erfordern – insbesondere aus handels- oder steuerrechtlichen Gründen. Daten, die nicht mehr für den ursprünglich vorgesehenen Zweck, sondern aufgrund gesetzlicher Vorgaben aufbewahrt werden, verarbeiten wir ausschließlich zu den Gründen, die ihre Aufbewahrung rechtfertigen.</p>
+    <p><strong>Fristbeginn mit Ablauf des Jahres:</strong> Beginnt eine Frist nicht ausdrücklich zu einem bestimmten Datum und beträgt sie mindestens ein Jahr, so startet sie automatisch am Ende des Kalenderjahres, in dem das fristauslösende Ereignis eingetreten ist.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 7. Rechte der betroffenen Personen -->
+  <div class="section" id="rechte">
+    <p class="section-label">7. Rechte der betroffenen Personen</p>
+    <p>Ihnen stehen als Betroffene nach der DSGVO verschiedene Rechte zu, die sich insbesondere aus Art. 15 bis 21 DSGVO ergeben:</p>
+    <ul>
+      <li><strong>Widerspruchsrecht:</strong> Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen.</li>
+      <li><strong>Widerrufsrecht bei Einwilligungen:</strong> Sie haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen.</li>
+      <li><strong>Auskunftsrecht:</strong> Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend den gesetzlichen Vorgaben.</li>
+      <li><strong>Recht auf Berichtigung:</strong> Sie haben das Recht, die Vervollständigung der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden unrichtigen Daten zu verlangen.</li>
+      <li><strong>Recht auf Löschung und Einschränkung der Verarbeitung:</strong> Sie haben das Recht, zu verlangen, dass Sie betreffende Daten unverzüglich gelöscht werden, bzw. alternativ eine Einschränkung der Verarbeitung der Daten zu verlangen.</li>
+      <li><strong>Recht auf Datenübertragbarkeit:</strong> Sie haben das Recht, Sie betreffende Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder deren Übermittlung an einen anderen Verantwortlichen zu fordern.</li>
+      <li><strong>Beschwerde bei Aufsichtsbehörde:</strong> Sie haben das Recht auf Beschwerde bei einer Aufsichtsbehörde. Zuständige Aufsichtsbehörde: Die Landesbeauftragte für den Datenschutz Niedersachsen, Hannover.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 8. Geschäftliche Leistungen -->
+  <div class="section" id="leistungen">
+    <p class="section-label">8. Geschäftliche Leistungen</p>
+    <p>Wir verarbeiten personenbezogene Daten unserer Vertrags- und Geschäftspartner, etwa Kunden, Interessenten und sonstige Kooperationspartner (zusammenfassend „Vertragspartner"), zur Anbahnung, Durchführung und Abwicklung von Vertragsverhältnissen sowie vergleichbaren Rechtsverhältnissen.</p>
+    <p>Die Verarbeitung dient insbesondere der Erfüllung unserer vertraglichen Haupt- und Nebenpflichten. Hierzu zählen die Erbringung der vereinbarten Leistungen, die Abwicklung von Widerrufen, Kündigungen von Dauerschuldverhältnissen, Rückabwicklungen, Erstattungen sowie die Bearbeitung sonstiger vertragsbezogener Erklärungen und Anfragen.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Zahlungsdaten, Kontaktdaten, Vertragsdaten, Nutzungsdaten, Meta-, Kommunikations- und Verfahrensdaten.</p>
+      <p><strong>Betroffene Personen:</strong> Leistungsempfänger und Auftraggeber, Interessenten, Geschäfts- und Vertragspartner, Bildungs- und Kursteilnehmer.</p>
+      <p><strong>Zwecke der Verarbeitung:</strong> Erbringung vertraglicher Leistungen und Erfüllung vertraglicher Pflichten, Kommunikation, Büro- und Organisationsverfahren.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO); Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DSGVO); Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Weitere Hinweise zu Verarbeitungsprozessen und Diensten</p>
+    <ul>
+      <li><strong>Onlineshop und E-Commerce:</strong> Wir verarbeiten die Daten unserer Kunden, um ihnen den Erwerb der gewählten Produkte sowie deren Bezahlung und Bereitstellung zu ermöglichen. Für die Abwicklung der Zahlungsvorgänge nehmen wir die Dienste von Zahlungsdienstleistern in Anspruch; Rechtsgrundlagen: Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).</li>
+      <li><strong>Bildungs- und Schulungsleistungen:</strong> Wir verarbeiten die Daten der Teilnehmer unserer Bildungs- und Schulungsangebote, um ihnen gegenüber unsere Schulungsleistungen erbringen zu können. In Rahmen unserer Tätigkeit können wir ferner besondere Kategorien von Daten, insbesondere Angaben zur Gesundheit, verarbeiten. Hierzu holen wir, sofern erforderlich, eine ausdrückliche Einwilligung ein; Rechtsgrundlagen: Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 9. Zahlungsverfahren -->
+  <div class="section" id="zahlung">
+    <p class="section-label">9. Zahlungsverfahren</p>
+    <p>Im Rahmen von Vertragsverhältnissen bieten wir sichere Zahlungsmöglichkeiten an und setzen hierzu externe Zahlungsdienstleister ein. Der Zahlungsverkehr erfolgt ausschließlich über verschlüsselte Verbindungen. Wir erhalten keine konto- oder kreditkartenbezogenen Informationen, sondern lediglich Informationen mit Bestätigung oder Negativbeauskunftung der Zahlung.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Zahlungsdaten, Vertragsdaten, Meta-, Kommunikations- und Verfahrensdaten.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Vertragserfüllung (Art. 6 Abs. 1 S. 1 lit. b) DSGVO); Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Eingesetzte Zahlungsdienstleister</p>
+    <ul>
+      <li><strong>PayPal:</strong> Zahlungsdienstleistungen; Dienstanbieter: PayPal (Europe) S.à r.l. et Cie, S.C.A., 22-24 Boulevard Royal, L-2449 Luxemburg; Website: <a href="https://www.paypal.com/de" target="_blank" rel="noopener">paypal.com/de</a>; Datenschutzerklärung: <a href="https://www.paypal.com/de/legalhub/paypal/privacy-full" target="_blank" rel="noopener">paypal.com/de/legalhub/paypal/privacy-full</a>.</li>
+      <li><strong>Stripe:</strong> Zahlungsdienstleistungen; Dienstanbieter: Stripe, Inc., 510 Townsend Street, San Francisco, CA 94103, USA; Website: <a href="https://stripe.com" target="_blank" rel="noopener">stripe.com</a>; Datenschutzerklärung: <a href="https://stripe.com/de/privacy" target="_blank" rel="noopener">stripe.com/de/privacy</a>; Grundlage Drittlandtransfers: Data Privacy Framework (DPF).</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 10. Webhosting -->
+  <div class="section" id="hosting">
+    <p class="section-label">10. Bereitstellung des Onlineangebots und Webhosting</p>
+    <p>Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Nutzungsdaten, Meta-, Kommunikations- und Verfahrensdaten, Protokolldaten.</p>
+      <p><strong>Betroffene Personen:</strong> Nutzer (z.&nbsp;B. Webseitenbesucher).</p>
+      <p><strong>Zwecke der Verarbeitung:</strong> Bereitstellung des Onlineangebots und Nutzerfreundlichkeit, Sicherheitsmaßnahmen.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Weitere Hinweise zu Verarbeitungsprozessen und Diensten</p>
+    <ul>
+      <li><strong>Bereitstellung Onlineangebot auf gemietetem Speicherplatz:</strong> Für die Bereitstellung unseres Onlineangebotes nutzen wir Speicherplatz, Rechenkapazität und Software, die wir von einem Serveranbieter (Webhoster) mieten; Rechtsgrundlagen: Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+      <li><strong>Erhebung von Zugriffsdaten und Logfiles:</strong> Der Zugriff auf unser Onlineangebot wird in Form von sogenannten „Server-Logfiles" protokolliert. Zu den Serverlogfiles können die Adresse und der Name der abgerufenen Webseiten und Dateien, Datum und Uhrzeit des Abrufs, übertragene Datenmengen, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL und im Regelfall IP-Adressen gehören. <strong>Löschung von Daten:</strong> Logfile-Informationen werden für die Dauer von maximal 30 Tagen gespeichert und danach gelöscht oder anonymisiert; Rechtsgrundlagen: Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+      <li><strong>Netlify:</strong> Hosting und Bereitstellung des Onlineangebots; Dienstanbieter: Netlify Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA; Website: <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a>; Datenschutzerklärung: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a>; Grundlage Drittlandtransfers: Standardvertragsklauseln.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 11. Cookies -->
+  <div class="section" id="cookies">
+    <p class="section-label">11. Einsatz von Cookies</p>
+    <p>Unter dem Begriff „Cookies" werden Funktionen verstanden, die Informationen auf Endgeräten der Nutzer speichern und aus ihnen auslesen. Cookies können zu Zwecken der Funktionsfähigkeit, der Sicherheit und des Komforts von Onlineangeboten sowie der Erstellung von Analysen der Besucherströme eingesetzt werden.</p>
+    <p>Wir verwenden Cookies gemäß den gesetzlichen Vorschriften. Dazu holen wir, wenn erforderlich, vorab die Zustimmung der Nutzer ein. Ist eine Zustimmung nicht notwendig, setzen wir auf unsere berechtigten Interessen. Die Einwilligung kann jederzeit widerrufen werden.</p>
+    <p><strong>Speicherdauer:</strong></p>
+    <ul>
+      <li><strong>Temporäre Cookies (Session-Cookies):</strong> Temporäre Cookies werden spätestens gelöscht, nachdem ein Nutzer das Onlineangebot verlassen und seinen Browser geschlossen hat.</li>
+      <li><strong>Permanente Cookies:</strong> Permanente Cookies bleiben auch nach dem Schließen des Browsers gespeichert. Die Speicherdauer kann bis zu zwei Jahre betragen.</li>
+    </ul>
+    <p><strong>Widerruf und Widerspruch (Opt-out):</strong> Nutzer können die von ihnen abgegebenen Einwilligungen jederzeit widerrufen und zudem einen Widerspruch gegen die Verarbeitung entsprechend den gesetzlichen Vorgaben, auch mittels der Privatsphäre-Einstellungen ihres Browsers, erklären.</p>
+    <p>Cookie-Einstellungen / Widerspruchsmöglichkeit: <a href="https://perimenopausekompass.netlify.app/#datenschutz">perimenopausekompass.netlify.app/#datenschutz</a></p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Meta-, Kommunikations- und Verfahrensdaten.</p>
+      <p><strong>Betroffene Personen:</strong> Nutzer (z.&nbsp;B. Webseitenbesucher).</p>
+      <p><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO); Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Weitere Hinweise</p>
+    <ul>
+      <li><strong>Verarbeitung von Cookie-Daten auf Grundlage einer Einwilligung:</strong> Wir setzen eine Einwilligungs-Management-Lösung (Cookie-Banner) ein, bei der die Einwilligung der Nutzer zur Verwendung von Cookies eingeholt wird. Die Nutzer haben die Möglichkeit, ihre Einwilligungen zu verwalten und zu widerrufen. Die Einwilligungserklärungen werden gespeichert, um eine erneute Abfrage zu vermeiden und den Nachweis der Einwilligung gemäß den gesetzlichen Anforderungen führen zu können; Rechtsgrundlagen: Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 12. Newsletter -->
+  <div class="section" id="newsletter">
+    <p class="section-label">12. Newsletter und elektronische Benachrichtigungen</p>
+    <p>Wir versenden Newsletter, E-Mails und weitere elektronische Benachrichtigungen (nachfolgend „Newsletter") ausschließlich mit der Einwilligung der Empfänger oder aufgrund einer gesetzlichen Grundlage. Sofern im Rahmen einer Anmeldung zum Newsletter dessen Inhalte genannt werden, sind diese Inhalte für die Einwilligung der Nutzer maßgeblich.</p>
+    <p><strong>Löschung und Einschränkung der Verarbeitung:</strong> Wir können die ausgetragenen E-Mail-Adressen bis zu drei Jahren auf Grundlage unserer berechtigten Interessen speichern, bevor wir sie löschen, um eine ehemals gegebene Einwilligung nachweisen zu können. Ein individueller Löschungsantrag ist jederzeit möglich.</p>
+    <p><strong>Newsletter-Inhalte:</strong> Gesundheitsinformationen zur Perimenopause, Hormongesundheit sowie Informationen zu Kursen und Angeboten.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Kontaktdaten, Meta-, Kommunikations- und Verfahrensdaten.</p>
+      <p><strong>Betroffene Personen:</strong> Kommunikationspartner, Nutzer.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</p>
+      <p><strong>Widerspruchsmöglichkeit (Opt-Out):</strong> Sie können den Empfang unseres Newsletters jederzeit kündigen. Einen Link zur Kündigung finden Sie am Ende eines jeden Newsletters oder können unsere oben angegebene E-Mail-Adresse nutzen.</p>
+    </div>
+    <p class="subsection-title">Eingesetzter Dienstleister</p>
+    <ul>
+      <li><strong>Brevo:</strong> E-Mail-Versand und Newsletter-Marketing; Dienstanbieter: Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin, Deutschland; Website: <a href="https://www.brevo.com" target="_blank" rel="noopener">brevo.com</a>; Datenschutzerklärung: <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/de/legal/privacypolicy</a>; Rechtsgrundlagen: Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO).</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 13. Werbliche Kommunikation -->
+  <div class="section" id="werbung">
+    <p class="section-label">13. Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</p>
+    <p>Wir verarbeiten personenbezogene Daten zu Zwecken der werblichen Kommunikation, die über diverse Kanäle, wie z.&nbsp;B. E-Mail, Telefon oder Post, entsprechend den gesetzlichen Vorgaben erfolgen kann.</p>
+    <p>Die Empfänger haben das Recht, erteilte Einwilligungen jederzeit zu widerrufen oder der werblichen Kommunikation jederzeit kostenlos zu widersprechen.</p>
+    <p>Nach Widerruf oder Widerspruch speichern wir die zum Nachweis der bisherigen Berechtigung erforderlichen Daten zur Kontaktaufnahme bis zu drei Jahre nach Ablauf des Jahres des Widerrufs oder Widerspruchs auf Grundlage unserer berechtigten Interessen.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Bestandsdaten, Kontaktdaten, Inhaltsdaten.</p>
+      <p><strong>Zwecke der Verarbeitung:</strong> Direktmarketing, Marketing, Absatzförderung.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 S. 1 lit. a) DSGVO); Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 14. Social Media -->
+  <div class="section" id="socialmedia">
+    <p class="section-label">14. Präsenzen in sozialen Netzwerken (Social Media)</p>
+    <p>Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und verarbeiten in diesem Rahmen Nutzerdaten, um mit den dort aktiven Nutzern zu kommunizieren oder Informationen über uns anzubieten.</p>
+    <p>Wir weisen darauf hin, dass dabei Nutzerdaten außerhalb des Raumes der Europäischen Union verarbeitet werden können. Ferner werden die Daten der Nutzer innerhalb sozialer Netzwerke im Regelfall für Marktforschungs- und Werbezwecke verarbeitet.</p>
+    <p>Für eine detaillierte Darstellung der jeweiligen Verarbeitungsformen und der Widerspruchsmöglichkeiten (Opt-out) verweisen wir auf die Datenschutzerklärungen der Betreiber der jeweiligen Netzwerke.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Kontaktdaten, Inhaltsdaten, Nutzungsdaten.</p>
+      <p><strong>Betroffene Personen:</strong> Nutzer.</p>
+      <p><strong>Zwecke der Verarbeitung:</strong> Kommunikation, Öffentlichkeitsarbeit.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Eingesetzte Netzwerke</p>
+    <ul>
+      <li><strong>Instagram:</strong> Soziales Netzwerk; Dienstanbieter: Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland; Website: <a href="https://www.instagram.com" target="_blank" rel="noopener">instagram.com</a>; Datenschutzerklärung: <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener">privacycenter.instagram.com/policy</a>; Grundlage Drittlandtransfers: Data Privacy Framework (DPF).</li>
+      <li><strong>Pinterest:</strong> Soziales Netzwerk; Dienstanbieter: Pinterest Europe Limited, 2nd Floor, Palmerston House, Fenian Street, Dublin 2, Irland; Website: <a href="https://www.pinterest.com" target="_blank" rel="noopener">pinterest.com</a>; Datenschutzerklärung: <a href="https://policy.pinterest.com/de/privacy-policy" target="_blank" rel="noopener">policy.pinterest.com/de/privacy-policy</a>.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 15. Plug-ins -->
+  <div class="section" id="plugins">
+    <p class="section-label">15. Plug-ins und eingebettete Funktionen sowie Inhalte</p>
+    <p>Wir binden Funktions- und Inhaltselemente in unser Onlineangebot ein, die von den Servern ihrer jeweiligen Anbieter (nachfolgend als „Drittanbieter" bezeichnet) bezogen werden. Die Einbindung setzt immer voraus, dass die Drittanbieter dieser Inhalte die IP-Adresse der Nutzer verarbeiten, da sie ohne IP-Adresse die Inhalte nicht an deren Browser senden könnten.</p>
+    <div class="meta-box">
+      <p><strong>Verarbeitete Datenarten:</strong> Nutzungsdaten, Meta-, Kommunikations- und Verfahrensdaten.</p>
+      <p><strong>Betroffene Personen:</strong> Nutzer.</p>
+      <p><strong>Zwecke der Verarbeitung:</strong> Bereitstellung des Onlineangebotes und Nutzerfreundlichkeit.</p>
+      <p><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</p>
+    </div>
+    <p class="subsection-title">Eingesetzte Dienste</p>
+    <ul>
+      <li><strong>Einbindung von Drittsoftware, Skripten oder Frameworks (z.&nbsp;B. Google Fonts):</strong> Wir binden in unser Onlineangebot Software ein, die wir von Servern anderer Anbieter abrufen. Hierbei erheben die jeweiligen Anbieter die IP-Adresse der Nutzer; Rechtsgrundlagen: Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
+      <li><strong>Google Fonts (Bezug vom Google Server):</strong> Bezug von Schriften zum Zwecke einer technisch sicheren, wartungsfreien und effizienten Nutzung. Dem Anbieter der Schriftarten wird die IP-Adresse des Nutzers mitgeteilt, damit die Schriftarten im Browser zur Verfügung gestellt werden können. Diese Daten können auf einem Server des Anbieters in den USA verarbeitet werden; Dienstanbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; Website: <a href="https://fonts.google.com/" target="_blank" rel="noopener">fonts.google.com</a>; Datenschutzerklärung: <a href="https://business.safety.google/privacy/" target="_blank" rel="noopener">business.safety.google/privacy</a>; Grundlage Drittlandtransfers: Data Privacy Framework (DPF); Weitere Informationen: <a href="https://developers.google.com/fonts/faq/privacy?hl=de" target="_blank" rel="noopener">developers.google.com/fonts/faq/privacy</a>.</li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 16. Änderung und Aktualisierung -->
+  <div class="section" id="aenderung">
+    <p class="section-label">16. Änderung und Aktualisierung</p>
+    <p>Wir bitten Sie, sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns durchgeführten Datenverarbeitungen dies erforderlich machen. Wir informieren Sie, sobald durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z.&nbsp;B. Einwilligung) oder eine sonstige individuelle Benachrichtigung erforderlich wird.</p>
+    <p class="credit">Erstellt mit dem kostenlosen Datenschutz-Generator.de von Dr. Thomas Schwenke.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 17. Begriffsdefinitionen -->
+  <div class="section" id="begriffe">
+    <p class="section-label">17. Begriffsdefinitionen</p>
+    <p>In diesem Abschnitt erhalten Sie eine Übersicht über die in dieser Datenschutzerklärung verwendeten Begrifflichkeiten.</p>
+    <ul>
+      <li><strong>Bestandsdaten:</strong> Informationen, die für die Identifikation und Verwaltung von Vertragspartnern, Benutzerkonten, Profilen und ähnlichen Zuordnungen notwendig sind, wie z.&nbsp;B. Namen, Kontaktinformationen oder Kundennummern.</li>
+      <li><strong>Inhaltsdaten:</strong> Informationen, die im Zuge der Erstellung, Bearbeitung und Veröffentlichung von Inhalten aller Art generiert werden, wie Texte, Bilder, Videos, Audiodateien und andere multimediale Inhalte.</li>
+      <li><strong>Kontaktdaten:</strong> Informationen, die die Kommunikation mit Personen oder Organisationen ermöglichen, wie Telefonnummern, postalische Adressen und E-Mail-Adressen.</li>
+      <li><strong>Meta-, Kommunikations- und Verfahrensdaten:</strong> Informationen über die Art und Weise, wie Daten verarbeitet, übermittelt und verwaltet werden, einschließlich IP-Adressen, Zeitstempel und Identifikationsnummern.</li>
+      <li><strong>Nutzungsdaten:</strong> Informationen, die erfassen, wie Nutzer mit digitalen Produkten und Plattformen interagieren, wie z.&nbsp;B. Seitenaufrufe, Verweildauer und Geräteinformationen.</li>
+      <li><strong>Personenbezogene Daten:</strong> Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</li>
+      <li><strong>Protokolldaten:</strong> Informationen über Ereignisse oder Aktivitäten, die in einem System oder Netzwerk protokolliert wurden, wie Zeitstempel, IP-Adressen, Benutzeraktionen und Fehlermeldungen.</li>
+      <li><strong>Verantwortlicher:</strong> Die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</li>
+      <li><strong>Verarbeitung:</strong> Jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang im Zusammenhang mit personenbezogenen Daten, vom Erheben über das Speichern bis zum Löschen.</li>
+      <li><strong>Vertragsdaten:</strong> Spezifische Informationen, die sich auf die Formalisierung einer Vereinbarung beziehen, wie Vertragsgegenstand, Laufzeit, Kundenkategorie und Zahlungsbedingungen.</li>
+      <li><strong>Zahlungsdaten:</strong> Alle Informationen, die zur Abwicklung von Zahlungstransaktionen benötigt werden, wie Bankverbindungen, Zahlungsbeträge und Transaktionsdaten.</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Luisa Fischer · She's a Vibe · Der Hormonshift</p>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="widerruf.html">Widerrufsbelehrung</a>
+  </div>
+</footer>
+
+</body>
+</html>
