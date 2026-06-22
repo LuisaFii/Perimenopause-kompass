@@ -14,20 +14,19 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 :root {
   --cream:      #faf7f2;
-  --sand:       #ede4d6;
-  --sand-mid:   #e0d4c0;
-  --sand-deep:  #c8b89e;
+  --sand:       #f2ebe0;
+  --sand-mid:   #e8dece;
+  --sand-deep:  #d9cdb8;
   --olive:      #7a6e50;
-  --olive-dark: #3d3018;
-  --olive-deep: #28200e;
+  --olive-dark: #4e4530;
+  --olive-deep: #35301f;
   --sage:       #9eb39a;
   --sage-light: #d6e2d2;
   --warm-gray:  #9a9082;
-  --text:       #1a1510;
-  --text-mid:   #38301e;
-  --text-light: #6a5e48;
+  --text:       #2e2a22;
+  --text-mid:   #5a5246;
+  --text-light: #7a7060;
   --terracotta: #b87355;
-  --blush:      #edddd4;
 }
 
 body {
@@ -140,8 +139,8 @@ body {
   gap: 12px;
   padding: 11px 0;
   border-bottom: 1px solid var(--sand-deep);
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14.5px;
+  font-weight: 300;
   color: var(--text-mid);
   line-height: 1.5;
   transition: color 0.2s;
@@ -332,8 +331,8 @@ body {
 }
 
 .body-text {
-  font-size: 15.5px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 300;
   line-height: 1.85;
   color: var(--text-mid);
 }
@@ -451,8 +450,8 @@ body {
 }
 
 .moment-body {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14.5px;
+  font-weight: 300;
   line-height: 1.7;
   color: var(--text-mid);
   padding-left: 16px;
@@ -508,7 +507,7 @@ body {
 /* ══════════════════════════════════════
    WAS DU BEKOMMST
 ══════════════════════════════════════ */
-.ergebnis { background: var(--blush); }
+.ergebnis { background: var(--sand); }
 
 .ergebnis-intro {
   display: grid;
@@ -534,7 +533,6 @@ body {
   position: relative;
   transition: background 0.3s;
   overflow: hidden;
-  border-top: 3px solid var(--sage);
 }
 
 .e-card::after {
@@ -919,67 +917,6 @@ footer a:hover { color: var(--sand-deep); }
 }
 
 /* ══════════════════════════════════════
-   BENEFITS BLOCK (NEU)
-══════════════════════════════════════ */
-.benefits-block {
-  background: var(--blush);
-  padding: 0 0 72px;
-}
-
-.ben-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  border-radius: 0 0 6px 6px;
-  overflow: hidden;
-}
-
-.ben-item {
-  background: var(--cream);
-  padding: 44px 36px 40px;
-  transition: background 0.3s;
-  border-top: 3px solid var(--sage);
-}
-
-.ben-item:hover { background: var(--sand); }
-
-.ben-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 52px;
-  font-weight: 300;
-  color: var(--sand-deep);
-  line-height: 1;
-  margin-bottom: 18px;
-  display: block;
-}
-
-.ben-item h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 23px;
-  font-weight: 400;
-  color: var(--olive-dark);
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-
-.ben-item p {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.8;
-  color: var(--text-mid);
-}
-
-@media (max-width: 900px) {
-  .ben-inner { grid-template-columns: 1fr; }
-  .benefits-block { padding: 0 0 48px; }
-}
-
-
-
-/* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
 @media (max-width: 900px) {
@@ -1152,27 +1089,6 @@ footer a:hover { color: var(--sand-deep); }
         <h2 class="heading">Vom Fragezeichen<br><em>zur Orientierung.</em></h2>
       </div>
       <p class="body-text">Du musst nicht alles sofort verändern. Es reicht, wenn du anfängst zu verstehen, was in deinem Körper passiert — und warum. Dieses Wissen gibt dir etwas zurück, das du vielleicht gerade vermisst: das Gefühl, dir selbst nicht mehr fremd zu sein.</p>
-    </div>
-
-    <!-- ══════════ BENEFITS (NEU) ══════════ -->
-    <div class="benefits-block reveal">
-      <div class="ben-inner">
-        <div class="ben-item">
-          <span class="ben-num">01</span>
-          <h3>Einordnung statt Verwirrung</h3>
-          <p>Du verstehst, was in deinem Körper passiert — und warum du dich so fühlst. Nicht als Diagnose, als Entlastung.</p>
-        </div>
-        <div class="ben-item">
-          <span class="ben-num">02</span>
-          <h3>Orientierung für diese Phase</h3>
-          <p>Der Kompass begleitet dich durch die gesamte Übergangszeit, nicht nur durch die nächsten Wochen.</p>
-        </div>
-        <div class="ben-item">
-          <span class="ben-num">03</span>
-          <h3>Vorbereitet ins Arztgespräch</h3>
-          <p>Mit der inkludierten Checkliste gehst du nicht mehr suchend in die Praxis — sondern mit klaren Worten.</p>
-        </div>
-      </div>
     </div>
     <div class="ergebnis-cards reveal">
       <div class="e-card">
