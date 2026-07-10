@@ -210,6 +210,24 @@ body {
 
 .btn-main:hover .arrow { transform: translateX(4px); }
 
+.btn-bundle-teaser {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--olive-dark);
+  border: 1.5px solid var(--olive-dark);
+  padding: 13px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-bundle-teaser:hover { background: var(--olive-dark); color: var(--cream); }
+
 .hero-meta {
   display: flex;
   align-items: center;
@@ -1045,6 +1063,10 @@ footer a:hover { color: var(--sand-deep); }
       <div style="margin-top:16px;display:inline-block;background:rgba(158,179,154,0.18);border:1px solid var(--sage);border-radius:4px;padding:8px 16px;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);">
         ✓ &nbsp;Inklusive Hormonshift-Checkliste
       </div>
+      <p style="margin-top:20px;font-size:14px;color:var(--text-light);">Du willst gleich alles?</p>
+      <a href="#kurse" class="btn-bundle-teaser">
+        Deine komplette Hormonwelt im Sparpaket <span class="arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1115,17 +1137,17 @@ footer a:hover { color: var(--sand-deep); }
       <div class="kurs-teaser-item">
         <img src="mockup_zyklus.png" alt="Zyklus im Umbruch">
         <p class="kurs-teaser-name">Zyklus im Umbruch</p>
-        <p class="kurs-teaser-price">24,99 €</p>
+        <p class="kurs-teaser-price">29 €</p>
       </div>
       <div class="kurs-teaser-item">
         <img src="mockup_innersafety.png" alt="Inner Safety">
         <p class="kurs-teaser-name">Inner Safety</p>
-        <p class="kurs-teaser-price">24,99 €</p>
+        <p class="kurs-teaser-price">29 €</p>
       </div>
       <div class="kurs-teaser-item">
         <img src="mockup_hormonshift.png" alt="Hormonshift im Alltag">
         <p class="kurs-teaser-name">Hormonshift im Alltag</p>
-        <p class="kurs-teaser-price">29,00 €</p>
+        <p class="kurs-teaser-price">29 €</p>
       </div>
     </div>
     <a href="#kurse" class="kurs-teaser-btn">Alle Kurse entdecken →</a>
@@ -1291,7 +1313,7 @@ footer a:hover { color: var(--sand-deep); }
   <div class="container">
     <p class="kurssystem-pre">Deine Reise durch die Perimenopause</p>
     <h2 class="kurssystem-title">Jeder Kurs ein Schritt.<br><em>Zusammen das komplette Bild.</em></h2>
-    <p class="kurssystem-sub">Jeder Kurs steht für sich – und jeder kommt mit einem Bonusprodukt, das du sofort nutzen kannst. Wer alles auf einmal möchte, spart mit dem Bundle fast 30 €.</p>
+    <p class="kurssystem-sub">Jeder Kurs steht für sich – viele kommen mit einem Bonusprodukt, das du sofort nutzen kannst. Wer alles auf einmal möchte, spart mit dem Bundle fast 38 €.</p>
 
     <div class="kurs-grid">
       <div class="kurs-card reveal">
@@ -1316,7 +1338,7 @@ footer a:hover { color: var(--sand-deep); }
           <p>Ein neuer Rhythmus beginnt – versteh, was hinter den Veränderungen steckt und wie du deinen Zyklus neu liest.</p>
           <p class="kurs-bonus">✦ Bonus: Deine Hormonlandkarte</p>
           <div class="kurs-footer">
-            <span class="kurs-price">24,99 €</span>
+            <span class="kurs-price">29 €</span>
             <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
@@ -1328,9 +1350,8 @@ footer a:hover { color: var(--sand-deep); }
           <span class="kurs-tag">Nervensystem</span>
           <h3>Inner Safety</h3>
           <p>Wenn der Körper lauter wird. Wege zurück in Stabilität und innere Ruhe – alltagstauglich und verständlich.</p>
-          <p class="kurs-bonus">✦ Bonus: The Inner Safety Process – ein kompletter Extrakurs</p>
           <div class="kurs-footer">
-            <span class="kurs-price">24,99 €</span>
+            <span class="kurs-price">29 €</span>
             <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
@@ -1344,7 +1365,7 @@ footer a:hover { color: var(--sand-deep); }
           <p>Einordnen statt aushalten. Wie kleine Entscheidungen deinen Hormonhaushalt täglich beeinflussen.</p>
           <p class="kurs-bonus">✦ Bonus: Konkrete Tipps für deine Hormonbalance</p>
           <div class="kurs-footer">
-            <span class="kurs-price">29,00 €</span>
+            <span class="kurs-price">29 €</span>
             <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
@@ -1354,13 +1375,13 @@ footer a:hover { color: var(--sand-deep); }
     <!-- Bundle -->
     <div class="bundle-box reveal">
       <p class="bundle-pre">Im absoluten Sparpaket</p>
-      <h3 class="bundle-title">Das komplette Hormonshift-System</h3>
-      <p class="bundle-desc">Alle vier Kurse. Alle Bonusprodukte. Ein Preis.<br>Du sparst fast 30 € gegenüber dem Einzelkauf.</p>
+      <h3 class="bundle-title">Deine komplette Hormonwelt</h3>
+      <p class="bundle-desc">Alle vier Kurse im Sparpaket.<br>Du sparst fast 38 € gegenüber dem Einzelkauf.</p>
       <div class="bundle-price-row">
-        <span class="bundle-old">Einzeln: 88,97 €</span>
-        <span class="bundle-price">59,99 €</span>
+        <span class="bundle-old">Einzeln: 96,99 €</span>
+        <span class="bundle-price">59 €</span>
       </div>
-      <a href="#kaufen" class="bundle-btn">Jetzt das komplette System sichern →</a>
+      <a href="https://alfima.com/luisafischer/die-hormonwelt-dein-komplettpaket-fur-die-perimenopause" class="bundle-btn">Jetzt das komplette System sichern →</a>
     </div>
   </div>
 </section>
