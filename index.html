@@ -711,6 +711,25 @@ body {
   letter-spacing: 0.05em;
 }
 
+.kompass-detail { background: var(--sand); }
+.kompass-detail-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 96px;
+  align-items: center;
+}
+.kompass-detail-mockup { position: sticky; top: 40px; }
+.kompass-detail-mockup img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 24px 60px rgba(78,69,48,0.18);
+}
+@media (max-width: 900px) {
+  .kompass-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .kompass-detail-mockup { position: static; max-width: 320px; margin: 0 auto; }
+}
+
 .about-content .heading { margin-bottom: 8px; }
 
 .about-tagline {
@@ -1051,7 +1070,7 @@ footer a:hover { color: var(--sand-deep); }
           <div class="hero-price">9,99 €</div>
           <div class="hero-price-sub">einmalig · inkl. MwSt.</div>
         </div>
-        <a href="#kaufen" class="btn-main">
+        <a href="https://alfima.com/luisafischer/perimenopause-kompass" class="btn-main">
           Perimenopause Kompass sichern + Bonus <span class="arrow">→</span>
         </a>
       </div>
@@ -1123,34 +1142,37 @@ footer a:hover { color: var(--sand-deep); }
   </div>
 </section>
 
-<!-- ══════════ KURS TEASER ══════════ -->
-<section class="kurs-teaser reveal">
+<!-- ══════════ KOMPASS DETAIL ══════════ -->
+<section class="section kompass-detail">
   <div class="container">
-    <p class="kurs-teaser-pre">Deine Reise durch die Perimenopause</p>
-    <h2 class="kurs-teaser-title">Vier Kurse.<br>Ein Weg. Alles, was du brauchst.</h2>
-    <div class="kurs-teaser-grid">
-      <div class="kurs-teaser-item">
-        <img src="mockup_kompass.png" alt="Perimenopause Kompass">
-        <p class="kurs-teaser-name">Perimenopause Kompass</p>
-        <p class="kurs-teaser-price">9,99 €</p>
+    <div class="kompass-detail-grid">
+      <div class="kompass-detail-mockup reveal">
+        <img src="mockup_kompass.png" alt="Der Perimenopause Kompass">
       </div>
-      <div class="kurs-teaser-item">
-        <img src="mockup_zyklus.png" alt="Zyklus im Umbruch">
-        <p class="kurs-teaser-name">Zyklus im Umbruch</p>
-        <p class="kurs-teaser-price">29 €</p>
-      </div>
-      <div class="kurs-teaser-item">
-        <img src="mockup_innersafety.png" alt="Inner Safety">
-        <p class="kurs-teaser-name">Inner Safety</p>
-        <p class="kurs-teaser-price">29 €</p>
-      </div>
-      <div class="kurs-teaser-item">
-        <img src="mockup_hormonshift.png" alt="Hormonshift im Alltag">
-        <p class="kurs-teaser-name">Hormonshift im Alltag</p>
-        <p class="kurs-teaser-price">29 €</p>
+      <div class="reveal">
+        <span class="label">Der Perimenopause Kompass</span>
+        <h2 class="heading">Was genau<br><em>dich erwartet.</em></h2>
+        <p class="body-text">Der Perimenopause Kompass ist dein Einstieg: ein kompakter, verständlicher Kurs, der dir zeigt, was in deinem Körper gerade passiert — ohne Fachchinesisch, ohne Verunsicherung.</p>
+        <ul class="moments-list" style="margin-top:24px;">
+          <li class="moment">
+            <div class="moment-head">Die Grundlagen der Perimenopause</div>
+            <div class="moment-body">Was diese Phase auslöst, wie lange sie dauert und warum sie sich so unterschiedlich anfühlt.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">Deine Symptome richtig einordnen</div>
+            <div class="moment-body">Schlaf, Stimmung, Zyklus, Energie — du verstehst den Zusammenhang statt einzelner, verwirrender Puzzleteile.</div>
+          </li>
+          <li class="moment">
+            <div class="moment-head">In deinem eigenen Tempo</div>
+            <div class="moment-body">Kompakt aufgebaut, jederzeit abrufbar — für immer, ohne Ablaufdatum.</div>
+          </li>
+        </ul>
+        <p style="margin-top:20px;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);">✦ Inklusive Hormonshift-Checkliste fürs Arztgespräch</p>
+        <a href="https://alfima.com/luisafischer/perimenopause-kompass" class="btn-main" style="margin-top:28px;">
+          Perimenopause Kompass sichern + Bonus <span class="arrow">→</span>
+        </a>
       </div>
     </div>
-    <a href="#kurse" class="kurs-teaser-btn">Alle Kurse entdecken →</a>
   </div>
 </section>
 
@@ -1230,7 +1252,7 @@ footer a:hover { color: var(--sand-deep); }
 <!-- ══════════ BONUS ══════════ -->
 <section class="section bonus">
   <div class="container">
-    <span class="label reveal">Dein Bonus. Direkt beim Kauf.</span>
+    <span class="label reveal">Dein Bonus zum Perimenopause Kompass</span>
     <h2 class="heading reveal">Die Hormonshift-Checkliste —<br><em>gut vorbereitet ins Arztgespräch.</em></h2>
     <div class="bonus-inner reveal">
       <div class="bonus-visual" style="border:none;background:transparent;padding:0;position:relative;">
@@ -1339,7 +1361,7 @@ footer a:hover { color: var(--sand-deep); }
           <p class="kurs-bonus">✦ Bonus: Deine Hormonlandkarte</p>
           <div class="kurs-footer">
             <span class="kurs-price">29 €</span>
-            <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
+            <a href="https://alfima.com/luisafischer/zyklus-im-umbruch" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
       </div>
@@ -1352,7 +1374,7 @@ footer a:hover { color: var(--sand-deep); }
           <p>Wenn der Körper lauter wird. Wege zurück in Stabilität und innere Ruhe – alltagstauglich und verständlich.</p>
           <div class="kurs-footer">
             <span class="kurs-price">29 €</span>
-            <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
+            <a href="https://alfima.com/luisafischer/inner-safety-zuruck-zu-mehr-gelassenheit-und-ruhe" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
       </div>
@@ -1366,7 +1388,7 @@ footer a:hover { color: var(--sand-deep); }
           <p class="kurs-bonus">✦ Bonus: Konkrete Tipps für deine Hormonbalance</p>
           <div class="kurs-footer">
             <span class="kurs-price">29 €</span>
-            <a href="#kaufen" class="kurs-btn">Jetzt kaufen</a>
+            <a href="https://alfima.com/luisafischer/hormonshift-im-alltag-dein-konkreter-fahrplan-fur-die-perimenopause" class="kurs-btn">Jetzt kaufen</a>
           </div>
         </div>
       </div>
