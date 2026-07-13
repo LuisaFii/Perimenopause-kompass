@@ -394,12 +394,27 @@ em { font-style: italic; }
 .bundle-box {
   background: var(--card);
   border-radius: 32px;
-  padding: 64px 56px;
-  text-align: center;
+  padding: 56px;
   border: 1px solid rgba(59,42,34,0.08);
   box-shadow: 0 24px 60px rgba(59,42,34,0.08);
   position: relative;
+  overflow: hidden;
 }
+.bundle-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+.bundle-visual {
+  position: relative;
+}
+.bundle-visual img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+.bundle-content { text-align: left; }
 .bundle-pre {
   display: inline-block;
   font-size: 11.5px;
@@ -416,8 +431,43 @@ em { font-style: italic; }
   color: var(--ink);
   margin-bottom: 16px;
 }
-.bundle-desc { font-size: 0.98rem; color: var(--text-mid); line-height: 1.7; max-width: 520px; margin: 0 auto 28px; font-weight: 400; }
-.bundle-price-row { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 30px; }
+.bundle-desc { font-size: 0.98rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 26px; font-weight: 400; }
+
+.bundle-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.bundle-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper);
+  padding: 14px 18px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+.bundle-includes li::before {
+  content: '✓';
+  color: var(--rose);
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.bundle-includes li span {
+  display: block;
+  font-weight: 400;
+  color: var(--text-mid);
+  font-size: 13.5px;
+  margin-top: 2px;
+}
+
+.bundle-price-row { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; }
 .bundle-old { font-size: 1rem; color: var(--text-light); text-decoration: line-through; }
 .bundle-price { font-family: 'Fraunces', serif; font-size: 2.6rem; font-weight: 500; color: var(--rose); }
 .bundle-btn {
@@ -434,6 +484,13 @@ em { font-style: italic; }
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .bundle-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(201,109,137,0.45); }
+
+@media (max-width: 900px) {
+  .bundle-grid { grid-template-columns: 1fr; gap: 36px; }
+  .bundle-content { text-align: center; }
+  .bundle-includes { text-align: left; }
+  .bundle-price-row { justify-content: center; }
+}
 
 /* ══════════════════════════════════════
    FÜR WEN
@@ -1108,14 +1165,27 @@ footer {
 
     <!-- Bundle -->
     <div class="bundle-box reveal">
-      <p class="bundle-pre">Im absoluten Sparpaket</p>
-      <h3 class="bundle-title">Deine komplette Hormonwelt</h3>
-      <p class="bundle-desc">Alle vier Kurse im Sparpaket.<br>Du sparst fast 38 € gegenüber dem Einzelkauf.</p>
-      <div class="bundle-price-row">
-        <span class="bundle-old">Einzeln: 96,99 €</span>
-        <span class="bundle-price">59 €</span>
+      <div class="bundle-grid">
+        <div class="bundle-visual">
+          <img src="bundle-mockup.png" alt="Alle vier Kurse der kompletten Hormonwelt">
+        </div>
+        <div class="bundle-content">
+          <p class="bundle-pre">Im absoluten Sparpaket</p>
+          <h3 class="bundle-title">Deine komplette Hormonwelt</h3>
+          <p class="bundle-desc">Alle vier Kurse im Sparpaket.<br>Du sparst fast 38 € gegenüber dem Einzelkauf.</p>
+          <ul class="bundle-includes">
+            <li>Perimenopause Kompass<span>Die Grundlagen &amp; Hormonshift-Checkliste fürs Arztgespräch</span></li>
+            <li>Zyklus im Umbruch<span>Inkl. Hormonlandkarte</span></li>
+            <li>Inner Safety<span>Wege zurück in Stabilität und innere Ruhe</span></li>
+            <li>Hormonshift im Alltag<span>Inkl. konkrete Tipps für deine Hormonbalance</span></li>
+          </ul>
+          <div class="bundle-price-row">
+            <span class="bundle-old">Einzeln: 96,99 €</span>
+            <span class="bundle-price">59 €</span>
+          </div>
+          <a href="https://alfima.com/luisafischer/die-hormonwelt-dein-komplettpaket-fur-die-perimenopause" class="bundle-btn">Jetzt das komplette System sichern →</a>
+        </div>
       </div>
-      <a href="https://alfima.com/luisafischer/die-hormonwelt-dein-komplettpaket-fur-die-perimenopause" class="bundle-btn">Jetzt das komplette System sichern →</a>
     </div>
   </div>
 </section>
