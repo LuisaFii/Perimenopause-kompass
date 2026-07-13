@@ -6,33 +6,256 @@
 <title>Impressum – Luisa Fischer · Der Hormonshift</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
+
 :root {
-  --cream:#faf7f2; --sand:#f2ebe0; --sand-mid:#e8dece; --sand-deep:#d9cdb8;
-  --olive:#7a6e50; --olive-dark:#4e4530; --olive-deep:#35301f;
-  --warm-gray:#9a9082; --text:#2e2a22; --text-mid:#5a5246; --text-light:#7a7060;
+  --cream:      #FBF6F1;
+  --sand:       #F6E7EC;
+  --sand-mid:   #EAD3DA;
+  --sand-deep:  #DBB4C1;
+  --rose:       #C96D89;
+  --ink:        #3B2A22;
+  --ink-deep:   #2A1E18;
+  --warm-gray:  #A6968A;
+  --text:       #3B2A22;
+  --text-mid:   #6E5B4F;
+  --text-light: #A6968A;
 }
-body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
-.nav { background:var(--cream); border-bottom:1px solid var(--sand-mid); padding:20px 40px; display:flex; align-items:center; justify-content:space-between; }
-.nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400; color:var(--olive-dark); text-decoration:none; letter-spacing:0.04em; }
-.nav-back { font-size:0.82rem; font-weight:300; color:var(--text-light); text-decoration:none; letter-spacing:0.04em; transition:color 0.2s; }
-.nav-back:hover { color:var(--olive); }
-.page-wrap { max-width:720px; margin:0 auto; padding:72px 24px 96px; }
-.page-title { font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; color:var(--olive-dark); letter-spacing:0.02em; margin-bottom:48px; padding-bottom:24px; border-bottom:1px solid var(--sand-mid); }
-.section { margin-bottom:40px; }
-.section-label { font-size:0.72rem; font-weight:500; color:var(--warm-gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:12px; }
-.section p { font-size:0.95rem; font-weight:300; color:var(--text-mid); line-height:1.9; }
-.section a { color:var(--olive); text-decoration:none; }
-.section a:hover { color:var(--olive-dark); text-decoration:underline; }
-.divider { border:none; border-top:1px solid var(--sand-mid); margin:40px 0; }
-footer { background:var(--olive-deep); border-top:1px solid rgba(255,255,255,0.06); padding:36px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-footer p, footer a { font-size:12px; font-weight:300; color:#6a6050; text-decoration:none; letter-spacing:0.04em; }
-footer a:hover { color:var(--sand-deep); }
-.footer-links { display:flex; gap:28px; flex-wrap:wrap; }
-@media (max-width:600px) { .nav { padding:16px 20px; } .page-wrap { padding:48px 20px 72px; } .page-title { font-size:2rem; } footer { flex-direction:column; align-items:flex-start; } }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav {
+  background: var(--cream);
+  border-bottom: 1px solid var(--sand-mid);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-back {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.nav-back:hover { color: var(--rose); }
+
+.page-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+}
+
+.page-title {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.page-date {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--warm-gray);
+  letter-spacing: 0.04em;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+/* Für Impressum: Titel ohne page-date direkt mit Trennlinie */
+.page-title:not(:has(+ .page-date)) {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--sand-mid);
+  margin-bottom: 48px;
+}
+
+/* Table of contents (Datenschutz) */
+.toc {
+  background: var(--sand);
+  border-radius: 14px;
+  padding: 30px 34px;
+  margin-bottom: 48px;
+}
+
+.toc-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--warm-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.toc ol { margin-left: 1.2rem; }
+
+.toc li {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  line-height: 2;
+}
+
+.toc a { color: var(--rose); text-decoration: none; }
+.toc a:hover { color: var(--ink); text-decoration: underline; }
+
+.section { margin-bottom: 40px; }
+
+.section-label {
+  font-family: 'Fraunces', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--sand-mid);
+}
+
+/* Kompaktes Label (Impressum-Stil ohne eigene Überschriftenoptik) */
+.impressum .section-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--warm-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.section p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 0.75rem;
+}
+
+.section p:last-child { margin-bottom: 0; }
+
+.section ul, .section ol { margin: 0.5rem 0 0.75rem 1.4rem; }
+
+.section li {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 0.4rem;
+}
+
+.section strong { font-weight: 600; color: var(--text); }
+
+.section a {
+  color: var(--rose);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.section a:hover { color: var(--ink); text-decoration: underline; }
+
+.subsection-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--warm-gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 20px 0 8px;
+}
+
+.divider { border: none; border-top: 1px solid var(--sand-mid); margin: 40px 0; }
+
+.meta-box {
+  background: var(--sand);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 12px 0;
+}
+.meta-box p { font-size: 0.88rem !important; color: var(--text-mid) !important; margin-bottom: 0.3rem !important; }
+
+.highlight-box {
+  background: var(--sand);
+  border-left: 3px solid var(--rose);
+  border-radius: 0 10px 10px 0;
+  padding: 22px 26px;
+  margin: 20px 0;
+}
+.highlight-box p { font-size: 0.92rem; font-weight: 400; color: var(--text-mid); line-height: 1.9; margin-bottom: 0.5rem; }
+.highlight-box p:last-child { margin-bottom: 0; }
+
+.muster-box {
+  background: var(--sand);
+  border: 1px solid var(--sand-mid);
+  border-radius: 14px;
+  padding: 30px 34px;
+  margin: 24px 0;
+}
+.muster-box p { font-size: 0.88rem; font-weight: 400; color: var(--text-mid); line-height: 1.9; margin-bottom: 0.6rem; }
+.muster-box p:last-child { margin-bottom: 0; }
+.muster-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--warm-gray);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.credit { font-size: 0.8rem; font-weight: 400; color: var(--warm-gray); font-style: italic; margin-top: 1.5rem; }
+
+footer {
+  background: var(--ink-deep);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer p, footer a {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(251,246,241,0.55);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+footer a:hover { color: var(--rose); }
+.footer-links { display: flex; gap: 26px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .nav { padding: 16px 20px; }
+  .page-wrap { padding: 56px 20px 80px; }
+  .page-title { font-size: 2rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .toc { padding: 22px; }
+  .muster-box { padding: 22px; }
+}
+
 </style>
 </head>
 <body>
@@ -40,7 +263,7 @@ footer a:hover { color:var(--sand-deep); }
   <a href="index.html" class="nav-brand">Der Hormonshift</a>
   <a href="index.html" class="nav-back">← Zurück zur Kursseite</a>
 </nav>
-<main class="page-wrap">
+<main class="page-wrap impressum">
   <h1 class="page-title">Impressum</h1>
   <div class="section">
     <p class="section-label">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
